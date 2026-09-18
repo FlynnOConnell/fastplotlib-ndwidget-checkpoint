@@ -1,12 +1,13 @@
 # ===== Project info
 
 [project]
-dynamic = ["version"]
-name = "fastplotlib"
-description = "Next-gen fast plotting library running on WGPU using the Pygfx rendering engine "
+name = "fastplotlib-ndwidget-checkpoint"
+version = "0.6.1.post194"
+description = "Unofficial checkpoint build of the fastplotlib ndwidget branch (0.6.1+194 commits, a75b6bf) packaged for downstream pinning. Installs as `fastplotlib`."
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [{ name = "Kushal Kolar" }, { name = "Caitlin Lewis" }]
+maintainers = [{ name = "Flynn OConnell", email = "flynnoconnell@gmail.com" }]
 keywords = [
     "visualization",
     "science",
@@ -59,18 +60,22 @@ tests = [
     "ome-zarr",
 ]
 imgui = ["wgpu[imgui]"]
-dev = ["fastplotlib[docs,notebook,tests,imgui]"]
+dev = ["fastplotlib-ndwidget-checkpoint[docs,notebook,tests,imgui]"]
 
 [project.urls]
-Homepage = "https://www.fastplotlib.org/"
+Homepage = "https://github.com/flynnoconnell/fastplotlib-ndwidget-checkpoint"
 Documentation = "https://www.fastplotlib.org/"
-Repository = "https://github.com/fastplotlib/fastplotlib"
+Repository = "https://github.com/flynnoconnell/fastplotlib-ndwidget-checkpoint"
+Upstream = "https://github.com/fastplotlib/fastplotlib"
 
 # ===== Building
 
 [build-system]
 requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "fastplotlib"
 
 # ===== Tooling
 

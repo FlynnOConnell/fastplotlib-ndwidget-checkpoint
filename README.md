@@ -1,3 +1,27 @@
+> ### Unofficial checkpoint fork
+>
+> This is **not** the official fastplotlib. It is an unmodified snapshot of the
+> [fastplotlib/fastplotlib](https://github.com/fastplotlib/fastplotlib) `ndwidget` **branch** at commit
+> [`a75b6bf`](https://github.com/fastplotlib/fastplotlib/commit/a75b6bf) (2026-09-18), which is v0.6.1 plus 194 commits.
+> It exists only so that downstream projects can pin a released version instead of a
+> git SHA, because `NDWidget` and friends live on that branch and are in no upstream release.
+>
+> **The only changes to upstream are packaging metadata** (distribution name, version,
+> URLs). No library code is modified.
+>
+> **This installs as `fastplotlib`.** It provides the same top-level `fastplotlib`
+> package as the real thing, so the two cannot coexist in one environment:
+>
+> ```bash
+> pip uninstall -y fastplotlib
+> pip install fastplotlib-ndwidget-checkpoint
+> ```
+>
+> Use the [official fastplotlib](https://github.com/fastplotlib/fastplotlib) unless you specifically need this checkpoint.
+> This fork will be retired once upstream releases these features.
+
+---
+
 <p align="center">
 <img src="https://github.com/fastplotlib/fastplotlib/blob/main/docs/source/fastplotlib_logo.svg" height="220" alt="logo">
 </p>
